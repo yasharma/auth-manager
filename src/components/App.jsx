@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Table } from 'reactstrap';
 import { config } from '../config';
 import { useFetch } from '../hooks';
@@ -6,7 +6,7 @@ import { TableList } from './TableList';
 import { Filter } from './Filter';
 
 export const App = (props) => {
-  const [list] = useFetch(config.authenticateUrl);
+  const [list] = useState([]);
 
   return (
     <div>
